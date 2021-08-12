@@ -1,6 +1,6 @@
 FROM jupyter/base-notebook:notebook-6.0.0
 
-RUN pip install pandas numpy fbprophet plotly jupyter-offlinenotebook
+RUN pip install pandas numpy httpstan fbprophet plotly jupyter-offlinenotebook
 
 RUN mkdir data
 RUN mkdir images
