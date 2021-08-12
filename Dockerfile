@@ -1,6 +1,6 @@
 FROM jupyter/datascience-notebook:33add21fab64
 
-RUN pip install wheel setuptools pandas numpy "pystan==2.18" httpstan convertdate jupyter-offlinenotebook
+RUN pip install pandas numpy convertdate jupyter-offlinenotebook
 RUN pip install plotly
 RUN pip install fbprophet
 
