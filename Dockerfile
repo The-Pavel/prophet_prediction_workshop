@@ -1,6 +1,6 @@
 FROM jupyter/datascience-notebook:33add21fab64
 
-RUN pip install pandas numpy pystan httpstan convertdate jupyter-offlinenotebook
+RUN pip install pandas numpy pystan httpstan convertdate lunarcalendar jupyter-offlinenotebook
 RUN pip install plotly
 RUN pip install fbprophet
 
