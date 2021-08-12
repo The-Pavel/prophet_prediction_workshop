@@ -7,8 +7,12 @@ FROM jupyter/datascience-notebook:33add21fab64
 
 # Conda distribution:
 RUN conda install -c conda-forge gcc_linux-64
-RUN conda install pandas numpy "pystan==2.19.1.1" convertdate lunarcalendar plotly jupyter-offlinenotebook
-RUN conda install -c conda-forge prophet
+RUN conda install pandas numpy pystan convertdate lunarcalendar plotly jupyter-offlinenotebook --no-cache
+#RUN conda install -c conda-forge prophet --no-cache
+
+# Let's try to explore the pystan unpickling problem
+RUN pip install pandas numpy pystan plotly jupyter-offlinenotebook
+RUN pip install fbprophet
 
 RUN mkdir data
 RUN mkdir images
