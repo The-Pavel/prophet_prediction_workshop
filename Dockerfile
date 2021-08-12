@@ -1,7 +1,7 @@
 FROM jupyter/datascience-notebook:33add21fab64
 
 RUN conda install pandas numpy "pystan<3" httpstan convertdate lunarcalendar plotly jupyter-offlinenotebook
-RUN conda install gcc
+RUN conda install -c conda-forge gcc_linux-64
 RUN conda install -c conda-forge prophet
 
 RUN mkdir data
