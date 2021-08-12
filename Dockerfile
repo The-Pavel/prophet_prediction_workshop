@@ -1,6 +1,8 @@
 FROM jupyter/base-notebook:notebook-6.0.0
 
-RUN pip install wheel setuptools pandas numpy "pystan<3" httpstan fbprophet plotly jupyter-offlinenotebook
+RUN pip install wheel setuptools pandas numpy "pystan==2.18" httpstan jupyter-offlinenotebook
+RUN pip install plotly
+RUN pip install fbprophet
 
 RUN mkdir data
 RUN mkdir images
