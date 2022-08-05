@@ -1,9 +1,9 @@
-FROM jupyter/datascience-notebook:latest
+FROM safakcirag/fbprophet
 
 # Pip distribution
 # RUN pip install pandas numpy gcc plotly jupyter-offlinenotebook
 # RUN pip install "pystan==2.18"
-# RUN pip install fbprophet
+# RUN pip install "fbprophet==0.5"
 
 # Conda distribution:
 #RUN conda install -c conda-forge 
@@ -13,15 +13,6 @@ FROM jupyter/datascience-notebook:latest
 # Let's try to explore the pystan unpickling problem
 #RUN pip install pandas numpy pystan~=2.14 plotly jupyter-offlinenotebook
 #RUN pip install fbprophet
-
-# https://stackoverflow.com/questions/56701359/running-setup-py-install-for-fbprophet-error
-RUN pip --no-cache-dir install pystan==2.17  #any version
-RUN pip --no-cache-dir install fbprophet==0.2 #any version
-RUN conda install Cython --force
-
-RUN pip install pystan
-RUN conda install pystan -c conda-forge gcc_linux-64
-RUN conda install -c conda-forge fbprophet
 
 RUN mkdir data
 RUN mkdir images
