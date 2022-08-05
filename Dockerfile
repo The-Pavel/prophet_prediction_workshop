@@ -1,4 +1,4 @@
-FROM jupyter/datascience-notebook:33add21fab64
+FROM jupyter/datascience-notebook:latest
 
 # Pip distribution
 # RUN pip install pandas numpy gcc plotly jupyter-offlinenotebook
