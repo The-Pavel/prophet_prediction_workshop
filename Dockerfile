@@ -11,7 +11,7 @@ RUN conda install -c conda-forge gcc_linux-64
 #RUN conda install -c conda-forge prophet --no-cache
 
 # Let's try to explore the pystan unpickling problem
-RUN pip install pandas numpy pystan plotly jupyter-offlinenotebook
+RUN pip install pandas numpy pystan~=2.14 plotly jupyter-offlinenotebook
 RUN pip install fbprophet
 
 RUN mkdir data
