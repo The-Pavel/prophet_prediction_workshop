@@ -1,4 +1,4 @@
-FROM jupyter/datascience-notebook:python-3.8.8
+FROM alexcpn/fb_prophet_python:3.7.13-buster
 
 # Pip distribution
 # RUN pip install pandas numpy gcc plotly jupyter-offlinenotebook
@@ -14,9 +14,6 @@ FROM jupyter/datascience-notebook:python-3.8.8
 RUN pip install --upgrade pip
 RUN pip install jupyter-offlinenotebook
 RUN pip install numpy pandas
-RUN pip install "plotly==5.5.0"
-RUN pip install "pystan==2.19.1.1"
-RUN pip install "fbprophet==0.7.1"
 
 RUN mkdir data
 RUN mkdir images
