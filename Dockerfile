@@ -11,8 +11,9 @@ FROM jupyter/datascience-notebook:python-3.7.6
 
 RUN pip install --upgrade pip
 RUN pip install jupyter-offlinenotebook
-RUN pip install numpy pandas plotly "pystan>=2.14"
-RUN pip install fbprophet==0.6
+RUN pip install numpy pandas
+RUN conda install pystan convertdate lunarcalendar plotly
+RUN pip install fbprophet
 
 RUN mkdir data
 RUN mkdir images
