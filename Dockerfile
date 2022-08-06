@@ -23,7 +23,6 @@ COPY --chown=1000:100 images/timeseriesdata.png images
 COPY --chown=1000:100 ["./Monthly Car Sales with Prophet.ipynb", "."]
 COPY --chown=1000:100 ["./Stock Predictions with Prophet.ipynb", "."]
 
-CMD jupyter notebook
 # ./work is found inside official jupyter images, we avoid unnecessary nesting
 # RUN rm -rf ./work
 # moving this line to the bottom to avoid MyBinder build crashing
