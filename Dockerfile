@@ -1,4 +1,4 @@
-FROM safakcirag/fbprophet
+FROM wajdikh/fbprophet
 
 # Pip distribution
 # RUN pip install pandas numpy gcc plotly jupyter-offlinenotebook
@@ -11,7 +11,7 @@ FROM safakcirag/fbprophet
 #RUN conda install -c conda-forge prophet --no-cache
 
 # Let's try to explore the pystan unpickling problem
-#RUN pip install pandas numpy pystan~=2.14 plotly jupyter-offlinenotebook
+RUN pip install pandas numpy jupyter-offlinenotebook
 #RUN pip install fbprophet
 
 RUN mkdir data
