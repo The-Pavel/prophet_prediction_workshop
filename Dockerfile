@@ -1,5 +1,4 @@
-FROM alexcpn/fb_prophet_python:3.7.13-buster
-
+FROM jupyter/datascience-notebook:python-3.7.6
 # Pip distribution
 # RUN pip install pandas numpy gcc plotly jupyter-offlinenotebook
 # RUN pip install "pystan==2.18"
@@ -10,10 +9,10 @@ FROM alexcpn/fb_prophet_python:3.7.13-buster
 #RUN conda install pandas numpy pystan convertdate lunarcalendar plotly jupyter-offlinenotebook
 #RUN conda install -c conda-forge prophet --no-cache
 
-# Let's try to explore the pystan unpickling problem
 RUN pip install --upgrade pip
 RUN pip install jupyter-offlinenotebook
-RUN pip install numpy pandas
+RUN pip install numpy pandas plotly "pystan>=2.14"
+RUN pip install fbprophet==0.6
 
 RUN mkdir data
 RUN mkdir images
