@@ -11,7 +11,7 @@ FROM jupyter/datascience-notebook:python-3.8.8
 
 RUN pip install --upgrade pip
 RUN pip install jupyter-offlinenotebook
-RUN pip install numpy pandas
+RUN pip install numpy pandas plotly>=5
 RUN pip install prophet
 
 RUN mkdir data
